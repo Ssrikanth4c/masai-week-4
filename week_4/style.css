@@ -1,8 +1,12 @@
 body{
     text-align: center;
     margin: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to top, #ebbba7 100%, #cfc7f8 100%);
 }
-
+h2{
+    color: teal;
+}
 #playerDetails{
     background: blueviolet;
     padding: 5px;
@@ -17,6 +21,7 @@ body{
     width: 600px;
     gap: 0 10px;   
 }
+input, select{background: wheat;}
 
 p{
     margin: auto 0px;
@@ -27,23 +32,20 @@ p{
     display: grid;
     grid-template-columns: auto 100px auto 100px;
     grid-template-rows: auto auto auto;
-    gap:10px 10px;
-    
-    /* flex-direction: column; */
+    gap:10px 10px;   
 }
+alert{
+    background: transparent;
+}
+
 #pEnterBtn{
     grid-area: 3/2/4/3;
+    font-size: 15px;
+    background: blueviolet;
+    color:wheat;
+    padding:3px 0;
 }
-/* .player2{
-    flex: 1;
-} */
-/* 
-.userChose{
-    border-style: dotted;
-    flex:0 1 100px;
 
-}
-} */
 .gameBoard{
     display: flex;
 }
