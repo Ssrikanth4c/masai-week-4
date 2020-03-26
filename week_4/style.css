@@ -1,0 +1,64 @@
+body{
+    text-align: center;
+    margin: 100px;
+}
+
+#playerDetails{
+    background: blueviolet;
+    padding: 5px;
+    font-size: 17px;
+    color: wheat;
+    margin-bottom: 20px;
+}
+.mainCont{
+    display: flex;
+    margin: auto;
+    /* border-style: dotted; */
+    width: 600px;
+    gap: 0 10px;   
+}
+
+p{
+    margin: auto 0px;
+}
+.player, .player2{
+    flex: 1;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto 100px auto 100px;
+    grid-template-rows: auto auto auto;
+    gap:10px 10px;
+    
+    /* flex-direction: column; */
+}
+#pEnterBtn{
+    grid-area: 3/2/4/3;
+}
+/* .player2{
+    flex: 1;
+} */
+/* 
+.userChose{
+    border-style: dotted;
+    flex:0 1 100px;
+
+}
+} */
+.gameBoard{
+    display: flex;
+}
+.gameBoard> div{
+    margin: auto;
+    /* border-style: dashed; */
+    flex-basis: 100px;
+}
+#board{
+    display: grid;
+    grid-template-columns: repeat(3,50px);
+    grid-template-rows: repeat(3, 50px);
+    /* width: 100px; */
+}
+#board>div{
+    border:1px solid black;
+    padding: 15px 0px;
+}
