@@ -5,7 +5,10 @@ mainContainer.setAttribute('class', 'mainCont')
 document.body.appendChild(mainContainer)
 
 playerDetails.addEventListener('click', addDetails)
-
+/*
+    when click on button it has to take player-1 and player-2 details.
+    when start the game left side and right side player-1 and player-2 details appeared
+ */
 function addDetails(){
 
     //player 
@@ -68,7 +71,7 @@ function addDetails(){
 
     
 
-    //append to min container of the page
+    //append to main container of the page
     mainContainer.append(playerDiv)
 
     p1Select.addEventListener('change',selectSym)
@@ -108,7 +111,10 @@ function getPlayerDetails(){
     // event.target.parentElement.hidden=true
 
 
-    // create tic toc toe Grid
+    /* create tic toc toe Grid
+    player-1 board player-2
+    leftSide: player-1 rightSide: player2 details
+    */
     var GameBoard=document.createElement('div')
     GameBoard.setAttribute('class', 'gameBoard')
 
@@ -122,11 +128,10 @@ function getPlayerDetails(){
     rightSide.setAttribute('id', 'right')
     rightSide.innerHTML='<b>'+player2+'</b>'+'<br>'+p2Sym
     
-    
+    // create 9 cells of board and append to Gamebaord Container
     for(var i=1;i<=9;i++){
         var div= document.createElement('div')
         div.setAttribute('id', 'item'+i)
-        // div.textContent=i
         board.append(div)
     }
 
@@ -140,7 +145,7 @@ function getPlayerDetails(){
                 event.target.textContent=p1Sym
                 fillCell++
             }
-            // console.log(event.target.textNode)
+    
         }else{
             if(event.target.textContent==''){
                 event.target.textContent=p2Sym
@@ -161,8 +166,9 @@ function getPlayerDetails(){
             col3P1=0,col3P2=0,r2P2=0,r2P1=0,
             r3P2=0,r3P1=0,dia1P1=0,dia1P2=0,
             dia2P1=0,dia2P2=0
-        //row1
+        
         for(var i=0;i<3;i++){
+            // row1
             if(board.children[i].textContent==p2Sym){
                p2++
             }else if(board.children[i].textContent==p1Sym)
