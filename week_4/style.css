@@ -2,16 +2,33 @@ body{
     text-align: center;
     margin: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to top, #ebbba7 100%, #cfc7f8 100%);
+    /* background-image: linear-gradient(to top, #ebbba7 100%, #cfc7f8 100%); */
+    background-image: 
+    url("./resources/ticback.png");
+    justify-content: center;
+    
+}
+.container{
+    justify-content: center;
 }
 h2{
-    color: teal;
+    width: 500px;
+    position: relative;
+    left: 35%;
+    border: 1px solid tomato;
+    color: rgb(250, 245, 245);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    background-color: tomato;
 }
 #playerDetails{
     background: blueviolet;
-    padding: 5px;
-    font-size: 17px;
-    color: wheat;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    border-radius: 10px 5px;
     margin-bottom: 20px;
 }
 .mainCont{
@@ -25,6 +42,8 @@ input, select{background: wheat;}
 
 p{
     margin: auto 0px;
+    color: rgb(24, 21, 21);
+    font-weight: 700;
 }
 .player, .player2{
     flex: 1;
@@ -37,13 +56,22 @@ p{
 alert{
     background: transparent;
 }
+input, select{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 600;
+}
 
 #pEnterBtn{
     grid-area: 3/2/4/3;
     font-size: 15px;
     background: blueviolet;
     color:wheat;
-    padding:3px 0;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding:10px;
+    font-weight: 700;
 }
 
 .gameBoard{
@@ -54,13 +82,20 @@ alert{
     /* border-style: dashed; */
     flex-basis: 100px;
 }
+#left, #right{
+    color: tomato;
+    font-size: 30px;
+}
 #board{
     display: grid;
-    grid-template-columns: repeat(3,50px);
-    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3, 100px);
     /* width: 100px; */
 }
 #board>div{
-    border:1px solid black;
-    padding: 15px 0px;
+    border:3px solid black;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    color:white;
 }

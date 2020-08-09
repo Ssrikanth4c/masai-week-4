@@ -10,16 +10,16 @@ playerDetails.addEventListener('click', addDetails)
     when start the game left side and right side player-1 and player-2 details appeared
  */
 function addDetails(){
-
+    playerDetails.style.display='none'
     //player 
     var playerDiv=document .createElement('div')
     playerDiv.setAttribute('class','player')
     //  label name and input
     var player1Name= document.createElement('p')
-    player1Name.innerHTML='enter Player-1 Name:'
+    player1Name.innerHTML='Player-1:'
     
     var player2Name= document.createElement('p')
-    player2Name.innerHTML='enter Player-2 Name:'
+    player2Name.innerHTML='Player-2:'
 
     var  p1Input= document.createElement('input','text')
     p1Input.setAttribute('id','p1Input')
@@ -31,13 +31,13 @@ function addDetails(){
 
     // select symbol
     var p1SelectName=document.createElement('p')
-    p1SelectName.innerText='choose Symbol'
+    p1SelectName.innerText='Symbol'
     var p1Select= document.createElement('select')
     p1Select.setAttribute('id','p1Select')
     p1Select.setAttribute('name', 'p1Select')
 
     var p2SelectName=document.createElement('p')
-    p2SelectName.innerText='choose Symbol'
+    p2SelectName.innerText='Symbol'
     var p2Select= document.createElement('select')
     p2Select.setAttribute('id','p2Select')
     p2Select.setAttribute('name', 'p2Select')
@@ -122,11 +122,11 @@ function getPlayerDetails(){
     board.setAttribute('id', 'board')
     var leftSide=document.createElement('div')
     leftSide.setAttribute('id', 'left')
-    leftSide.innerHTML='<b>'+player1+'</b>'+'<br>'+p1Sym
+    leftSide.innerHTML='<h1>'+player1+'</h2>'+'<b>'+p1Sym+'</b>'
     
     var rightSide=document.createElement('div')
     rightSide.setAttribute('id', 'right')
-    rightSide.innerHTML='<b>'+player2+'</b>'+'<br>'+p2Sym
+    rightSide.innerHTML='<h1>'+player2+'</h1>'+'<b>'+p2Sym+'</b>'
     
     // create 9 cells of board and append to Gamebaord Container
     for(var i=1;i<=9;i++){
